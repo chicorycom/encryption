@@ -1,0 +1,28 @@
+{
+    "name": "chicorycom/encryption",
+    "description": "Your System and Security Network Integrator",
+    "version":"1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Assane Sarr",
+            "email": "contact@chicorycom.net",
+            "homepage": "https://www.chicorycom.net",
+            "role": "Developer"
+        }
+    ],
+  "support": {
+    "email": "contact@chicorycom.net",
+    "irc": "irc://irc.freenode.org/composer"
+  },
+  "autoload": {
+    "psr-4": {
+      "chicorycom\\": "src/",
+      "chicorycom\\inter\\": "src/interface",
+      "chicorycom\\facade\\": "src/facade"
+    }
+  },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    }
+}
