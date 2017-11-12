@@ -17,6 +17,7 @@ class encryption implements InterEncryption
         private $EnctyptageKey = null;
         private $Count;
         private $Tmp = "";
+        private $Str;
         protected $_Key;
 
     public function __construct(
@@ -28,12 +29,13 @@ class encryption implements InterEncryption
 
 
     /**
-     * @param $Str
-     * @param $EnctyptageKey
-     * @return mixed
+     * @param string $Str
+     * @param string $EnctyptageKey
+     * @return string
      */
-    public function GenerationCle(string $Str, string $EnctyptageKey)
+    public function GenerationCle(string $Str, string $EnctyptageKey): string
     {
+
         $this->EnctyptageKey = md5($EnctyptageKey);
         $this->Count=0;
         $this->Tmp = "";
@@ -47,11 +49,8 @@ class encryption implements InterEncryption
         return $this->Tmp;
     }
 
-    /**
-     * @param $Str
-     * @return mixed
-     */
-    public function Crypte(string $Str)
+
+    public function Crypte(string $Str) : string
     {
         srand((double)microtime()*1000000);
         $this->EnctyptageKey = md5(rand(0,32000) );
@@ -67,19 +66,16 @@ class encryption implements InterEncryption
         return base64_encode($this->GenerationCle($this->Tmp,$this->_Key) );
     }
 
-    /**
-     * @param $Str
-     * @return mixed
-     */
-    public function Decrypte(string $Str)
+
+    public function Decrypte(string $Str) : string
     {
-        $Str = $this->GenerationCle(base64_decode($Str),$this->_Key);
+        $this->Str = $this->GenerationCle(base64_decode($Str),$this->_Key);
         $this->Tmp = "";
-        for ($Ctr=0;$Ctr<strlen($Str);$Ctr++)
+        for ($Ctr=0;$Ctr<strlen($this->Str);$Ctr++)
         {
-            $md5 = substr($Str,$Ctr,1);
+            $md5 = substr($this->Str,$Ctr,1);
             $Ctr++;
-            $this->Tmp.= (substr($Str,$Ctr,1) ^ $md5);
+            $this->Tmp.= (substr($this->Str,$Ctr,1) ^ $md5);
         }
         return $this->Tmp;
     }

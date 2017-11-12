@@ -11,25 +11,25 @@ namespace chicorycom\inter;
 
 interface InterEncryption
 {
-    /**
-     * @param $Str
-     * @param $EnctyptageKey
-     * @return mixed
-     */
-    public function GenerationCle(string $Str, string $EnctyptageKey);
-
 
     /**
-     * @param $Str
-     * @return mixed
+     * @param string $Str
+     * @param string $EnctyptageKey
+     * @return string
      */
-    public function Crypte(string $Str);
-
+    public function GenerationCle(string $Str, string $EnctyptageKey): string ;
 
 
     /**
-     * @param $Str
-     * @return mixed
+     * @param string $Str
+     * @return string
      */
-    public function Decrypte(string $Str);
+    public function Crypte(string $Str): string ;
+
+
+    /**
+     * @param string $Str
+     * @return string
+     */
+    public function Decrypte(string $Str): string ;
 }

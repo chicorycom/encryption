@@ -6,7 +6,21 @@
  * Time: 18:05
  */
 
-class CrypteTest
+use chicorycom\facade\Encrypte;
+use PHPUnit\Framework\TestCase;
+
+
+final class CrypteTest extends TestCase
 {
+    public function testCrypte()
+    {
+        $crypt = Encrypte::Crypt('user@example.com');
+
+       $this->assertEquals(
+            'user@example.com',
+            Encrypte::Decrypt($crypt)
+        );
+    }
+
 
 }

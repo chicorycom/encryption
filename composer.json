@@ -1,7 +1,8 @@
 {
     "name": "chicorycom/encryption",
+    "type": "library",
     "description": "Your System and Security Network Integrator",
-    "version":"1.0.0",
+    "version":"v1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -14,6 +15,9 @@
   "support": {
     "email": "contact@chicorycom.net",
     "irc": "irc://irc.freenode.org/composer"
+  },
+  "require": {
+    "php": ">=7.1.0"
   },
   "autoload": {
     "psr-4": {
