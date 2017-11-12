@@ -14,10 +14,10 @@ final class CrypteTest extends TestCase
 {
     public function testCrypte()
     {
-        $crypt = Encrypte::Crypt('user@example.com');
+        $crypt = Encrypte::Crypt('contact@chicorycom.net');
 
        $this->assertEquals(
-            'user@example.com',
+            'contact@chicorycom.net',
             Encrypte::Decrypt($crypt)
         );
     }
