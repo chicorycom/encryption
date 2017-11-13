@@ -2,7 +2,7 @@
     "name": "chicorycom/encryption",
     "type": "library",
     "description": "Your System and Security Network Integrator",
-    "version":"v1.0.0",
+    "version":"v1.0.2",
     "license": "MIT",
     "authors": [
         {
