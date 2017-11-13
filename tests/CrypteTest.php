@@ -17,7 +17,7 @@ final class CrypteTest extends TestCase
         $crypt = Encrypte::Crypt('contact@chicorycom.net le test des donnes');
 
        $this->assertEquals(
-            'contact@chicorycom.net',
+            'contact@chicorycom.net le test des donnes',
             Encrypte::Decrypt($crypt)
         );
     }
