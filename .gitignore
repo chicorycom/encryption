@@ -2,3 +2,4 @@
 .gitignore
 vendor/
 index.php
+phpunit.xml
