@@ -11,7 +11,7 @@ namespace chicorycom\facade;
 
 use chicorycom\encryption;
 
-class Encrypte
+trait Encrypte
 {
 
     /**

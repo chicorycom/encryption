@@ -23,6 +23,7 @@ interface InterEncryption
     /**
      * @param string $Str
      * @return string
+     * return Cryptage
      */
     public function Crypte(string $Str): string ;
 
@@ -30,6 +31,7 @@ interface InterEncryption
     /**
      * @param string $Str
      * @return string
+     * return Decryptage
      */
     public function Decrypte(string $Str): string ;
 }

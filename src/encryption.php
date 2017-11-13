@@ -20,6 +20,10 @@ class encryption implements InterEncryption
         private $Str;
         protected $_Key;
 
+    /**
+     * encryption constructor.
+     * @param string $Cle
+     */
     public function __construct(
         string $Cle = '$ABCDEFGHIJKLMNOPQRSTUVWXYZzcjg@@itlhopdieu1234567890fhryuqsddvcfgtrqde5%^---___@'
     )
@@ -50,6 +54,10 @@ class encryption implements InterEncryption
     }
 
 
+    /**
+     * @param string $Str
+     * @return string
+     */
     public function Crypte(string $Str) : string
     {
         srand((double)microtime()*1000000);
@@ -67,6 +75,10 @@ class encryption implements InterEncryption
     }
 
 
+    /**
+     * @param string $Str
+     * @return string
+     */
     public function Decrypte(string $Str) : string
     {
         $this->Str = $this->GenerationCle(base64_decode($Str),$this->_Key);
