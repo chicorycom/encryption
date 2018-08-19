@@ -2,18 +2,18 @@
     "name": "chicorycom/encryption",
     "type": "library",
     "description": "Your System and Security Network Integrator",
-    "version":"v1.0.0",
+    "version":"v1.0.1",
     "license": "MIT",
     "authors": [
         {
             "name": "Assane Sarr",
-            "email": "contact@chicorycom.net",
+            "email": "chickoryproduction@gmail.com",
             "homepage": "https://www.chicorycom.net",
             "role": "Developer"
         }
     ],
   "support": {
-    "email": "contact@chicorycom.net",
+    "email": "chickoryproduction@gmail.com",
     "irc": "irc://irc.freenode.org/composer"
   },
   "require": {
