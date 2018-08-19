@@ -27,7 +27,7 @@ composer require chicorycom/encryption
 require __DIR__.'/../vendor/autoload.php';
 
 use chicorycom\encryption;
-$encryption = new encryption()
+$encryption = new encryption(Your-KEY Optionel)
 echo $encryption->Crypte('test');
 UCRTNgx1B3A=
 
@@ -50,7 +50,7 @@ test
 
 ## Meta
 
-Your Name – [@Assane Sarr](https://www.facebook.com/chicorycom.net) – chickoryproduction@gmail.com
+[@Assane Sarr](https://www.facebook.com/chicorycom.net) – chickoryproduction@gmail.com
 
 Distribué sous la licence MIT. Voir `` LICENCE`` pour plus d'informations.
 
